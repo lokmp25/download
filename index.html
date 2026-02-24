@@ -2,21 +2,129 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>NAGI | DOWNLOAD CENTER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAGI X PRO | DOWNLOAD CENTER</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background: #050508; color: white; font-family: monospace; text-align: center; padding: 50px; }
-        .dl-card { border: 1px solid #ff0055; background: #0a0a0f; padding: 30px; display: inline-block; border-radius: 15px; box-shadow: 0 0 20px #ff0055; }
-        .btn { background: #ff0055; color: white; padding: 15px 30px; text-decoration: none; display: inline-block; margin-top: 20px; font-weight: bold; border-radius: 5px; }
-        h1 { color: #00f7ff; }
+        :root {
+            --nagi-red: #ff0055;
+            --nagi-cyan: #00f7ff;
+            --bg: #050508;
+        }
+
+        body { 
+            background: var(--bg); 
+            color: white; 
+            font-family: 'Segoe UI', Tahoma, sans-serif; 
+            text-align: center; 
+            margin: 0; 
+            overflow: hidden;
+        }
+
+        /* شريط التنقل */
+        .nav-bar {
+            background: rgba(0,0,0,0.9);
+            padding: 15px;
+            border-bottom: 2px solid var(--nagi-red);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .nav-bar a { color: white; text-decoration: none; font-weight: bold; font-size: 14px; }
+        .nav-bar a:hover { color: var(--nagi-cyan); }
+
+        /* حاوية التحميل */
+        .main-container {
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .dl-card { 
+            border: 1px solid var(--nagi-red); 
+            background: #0a0a0f; 
+            padding: 40px; 
+            border-radius: 20px; 
+            box-shadow: 0 0 30px rgba(255, 0, 85, 0.3);
+            position: relative;
+            max-width: 450px;
+        }
+
+        .dl-card::before {
+            content: "SECURE_CONNECTION";
+            position: absolute; top: -10px; right: 20px;
+            background: var(--nagi-red); color: white;
+            font-size: 10px; padding: 2px 10px; border-radius: 5px;
+        }
+
+        h1 { color: var(--nagi-cyan); text-shadow: 0 0 10px var(--nagi-cyan); margin-bottom: 10px; }
+        
+        .status-box {
+            background: rgba(0, 247, 255, 0.05);
+            border: 1px dashed var(--nagi-cyan);
+            padding: 15px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 13px;
+            text-align: right;
+        }
+
+        .btn { 
+            background: var(--nagi-red); 
+            color: white; 
+            padding: 18px 40px; 
+            text-decoration: none; 
+            display: inline-block; 
+            font-weight: bold; 
+            border-radius: 10px;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 0, 85, 0.4);
+        }
+
+        .btn:hover { 
+            background: var(--nagi-cyan); 
+            color: black; 
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px var(--nagi-cyan);
+        }
+
+        footer { opacity: 0.3; margin-top: 30px; letter-spacing: 3px; font-size: 12px; }
     </style>
 </head>
 <body>
-    <div class="dl-card">
-        <h1>NAGI PC PRO V5.0</h1>
-        <p>بناء النظام: C++ / ImGui Base</p>
-        <p style="color: #555;">SHA-256: 88F2...NAGI</p>
-        <a href="#" class="btn">بدء التحميل الآمن</a>
+
+    <nav class="nav-bar">
+        <a href="https://lokmp25.github.io/index.html/">🏠 الرئيسية</a>
+        <a href="https://lokmp25.github.io/index.html/store.html">🛒 المتجر</a>
+        <a href="#">📥 مركز التحميل</a>
+    </nav>
+
+    <div class="main-container">
+        <div class="dl-card">
+            <i class="fas fa-shield-virus" style="font-size: 50px; color: var(--nagi-red); margin-bottom: 15px;"></i>
+            <h1>NAGI PC PRO V5.0</h1>
+            
+            <div class="status-box">
+                <div>• Version: 5.0.2 (Stable)</div>
+                <div>• Build: C++ / ImGui Runtime</div>
+                <div>• Status: <span style="color: #00ff00;">UNDETECTED</span></div>
+                <div>• SHA-256: 88F2...NAGI_PRO</div>
+            </div>
+
+            <p style="font-size: 14px; color: #888;">اضغط على الزر أدناه لبدء تحميل ملف الـ Bypass الآمن.</p>
+            
+            <a href="رابط_ملفك_هنا" class="btn">
+                <i class="fas fa-download"></i> بدء التحميل الآمن
+            </a>
+        </div>
+
+        <footer>DESIGNED BY NAGI X PRO © 2026</footer>
     </div>
-    <p style="margin-top: 50px; opacity: 0.3;">DESIGNED BY NAGI X PRO</p>
+
 </body>
 </html>
+
